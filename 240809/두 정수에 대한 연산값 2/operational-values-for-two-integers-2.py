@@ -1,13 +1,16 @@
 a,b = map(int,input().split())
 
-small = min(a,b)
-big = max(a,b)
+
 
 def re(a,b):
-    result1 = small + 10
-    result2 = big * 2
+    if a < b:
+        a = a+10
+        b = b*2
+    else:
+        a = a * 2
+        b = b + 10
 
-    return result1, result2
+    return a, b
 
 result = re(a,b)
 print(f"{result[0]} {result[1]}")
