@@ -3,7 +3,7 @@ n = int(input())
 commands = []
 
 for _ in range(n):
-    commands.append(list(input().split()))
+    commands.append(input())
 
 def flip_tiles(commands):
     # 타일의 색상 정보를 저장할 딕셔너리
@@ -45,7 +45,5 @@ def flip_tiles(commands):
     
     return white_count, black_count
 
-# 입력 명령
-commands = ["4 R", "5 L", "7 R", "4 L"]
 white_count, black_count = flip_tiles(commands)
 print(white_count, black_count)
