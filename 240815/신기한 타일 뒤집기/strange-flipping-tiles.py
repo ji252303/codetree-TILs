@@ -20,23 +20,15 @@ def flip_tiles(commands):
             for i in range(current_position, current_position - x, -1):
                 if i not in tiles:
                     tiles[i] = 'W'  # 기본적으로 왼쪽으로 뒤집으면 흰색으로
-                elif tiles[i] == 'G':
-                    tiles[i] = 'W'
-                elif tiles[i] == 'W':
-                    tiles[i] = 'G'
                 elif tiles[i] == 'B':
                     tiles[i] = 'W'
             current_position -= (x - 1)  # 마지막에 위치한 타일로 이동
         elif direction == 'R':
             for i in range(current_position, current_position + x):
                 if i not in tiles:
-                    tiles[i] = 'B'  # 기본적으로 오른쪽으로 뒤집으면 검은색으로
-                elif tiles[i] == 'G':
-                    tiles[i] = 'B'
+                    tiles[i] = 'B'  # 기본적으로 오른쪽으로 뒤집으면 검은색으로     
                 elif tiles[i] == 'W':
                     tiles[i] = 'B'
-                elif tiles[i] == 'B':
-                    tiles[i] = 'G'
             current_position += (x - 1)  # 마지막에 위치한 타일로 이동
     
     # 결과 계산
